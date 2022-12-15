@@ -2,5 +2,14 @@
 {% block title %}New Post{% endblock %}</title>
 
 {% block body %}
-    TODO
+<h1 class="mx-3">New Post</h1>
+<hr>
+<div class="container">
+<form action="" >
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit" class="btn btn-primary">Post</button>
+</form>
+</div>
+    
 {% endblock %}

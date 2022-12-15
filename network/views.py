@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse
 
 from .models import User
+from .forms import PostForm
 
 
 def index(request):
@@ -63,4 +64,5 @@ def register(request):
         return render(request, "network/register.html")
 
 def new_post(request):
-    return render(request, "network/new_post.html")
+    form = PostForm()
+    return render(request, "network/new_post.html", {'form': form})

@@ -6,4 +6,4 @@ class User(AbstractUser):
     pass
 
 class Post(models.Model):
-    entry = models.TextField()
+    content = models.TextField()
